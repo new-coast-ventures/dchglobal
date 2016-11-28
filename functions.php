@@ -102,6 +102,10 @@ add_action( 'widgets_init', 'dchglobal_widgets_init' );
  * Enqueue scripts and styles.
  */
 function dchglobal_scripts() {
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css');
+
+	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array('jquery'), '', true );
+
 	wp_enqueue_style( 'dchglobal-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'dchglobal-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
