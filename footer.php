@@ -13,11 +13,13 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer nav nav-inline" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'dchglobal' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'dchglobal' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'dchglobal' ), 'dchglobal', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+    <ul>
+      <li class="nav-item">
+      &copy; 2016 DCH Global Optima
+      </li>      
+    </ul>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
