@@ -17,8 +17,17 @@
 		<div class="site-info">
     <ul>
       <li class="nav-item">
-      &copy; 2016 DCH Global Optima
-      </li>      
+      	&copy; 2016 DCH Global Optima
+      </li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Privacy Policy</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Terms and Conditions</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Contact</a>
+			</li>
     </ul>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
