@@ -19,15 +19,12 @@
       <li class="nav-item">
       	&copy; 2016 DCH Global Optima
       </li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Privacy Policy</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Terms and Conditions</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Contact</a>
-			</li>
+	     <?php wp_nav_menu( array(
+         'container' => false,
+         'theme_location' => 'footer',
+         'items_wrap' => '%3$s'
+       ) );
+       ?>
     </ul>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
