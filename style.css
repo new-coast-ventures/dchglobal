@@ -19,10 +19,23 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
-.site-footer {
+
+.home .site-footer {
+  width: 100%;
   text-align: center;
+  margin: -2rem auto 0;
+  z-index: 5000;
+  position: absolute;
 }
 .navbar-nav {
   padding-top: 35px;
   padding-bottom: 35px;
+}
+
+.home .navbar {
+  position: absolute !important;
+}
+
+.home {
+  background-color: black;
 }

@@ -14,7 +14,6 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer nav nav-inline" role="contentinfo">
-		<div class="site-info">
     <ul>
       <li class="nav-item">
       	&copy; 2016 DCH Global Optima
@@ -26,7 +25,6 @@
        ) );
        ?>
     </ul>
-		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
