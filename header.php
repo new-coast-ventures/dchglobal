@@ -22,7 +22,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<nav id="site-navigation" class="navbar navbar-full navbar-dark" role="navigation">
-  <div class="container">
+  <div class="container-fluid">
     <a class="navbar-brand" href="<?php echo get_site_url(); ?>">
   <img src="http://placehold.it/200x100" alt="DCH Global">
 </a>

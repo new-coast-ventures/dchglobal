@@ -23,9 +23,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .home .site-footer {
   width: 100%;
   text-align: center;
-  margin: -2rem auto 0;
   z-index: 5000;
   position: absolute;
+  bottom: 0;
 }
 .navbar-nav {
   padding-top: 35px;
@@ -33,7 +33,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 }
 
 .home .navbar {
-  position: absolute !important;
+  position: relative !important;
 }
 
 .home {
@@ -42,10 +42,22 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 .full-screen {
   position: absolute;
+  top: 0;
   background-size: cover;
-  background-position: center;
+  /*background-position: center;*/
   background-repeat: no-repeat;
 }
+
 .carousel-item img {
   height: 100% !important;
+  width: 100vw;
+}
+
+.index {
+  position: absolute;
+  top: 0;
+}
+
+.carousel-inner {
+  width: 100%;
 }

@@ -13,7 +13,7 @@
  */
 
 get_header(); ?>
-<div id="primary" class="content-area">
+<div id="primary" class="content-area index">
 	<main id="homepage-carousel" class="carousel slide" class="site-main" role="main" data-ride="carousel">
 		  <ol class="carousel-indicators">
 		    <li data-target="#homepage-carousel" data-slide-to="0" class="active"></li>
@@ -22,13 +22,13 @@ get_header(); ?>
 		  </ol>
 		  <div class="carousel-inner" role="listbox">
 		    <div class="carousel-item active">
-		      <img src="http://placehold.it/3840x2160" alt="First slide">
+		      <img src="http://placehold.it/1024x768" alt="First slide">
 		    </div>
 		    <div class="carousel-item">
-		      <img src="http://placehold.it/3840x2160" alt="Second slide">
+		      <img src="http://placehold.it/1024x768" alt="Second slide">
 		    </div>
 		    <div class="carousel-item">
-		      <img src="http://placehold.it/3840x2160" alt="Third slide">
+		      <img src="http://placehold.it/1024x768" alt="Third slide">
 		    </div>
 		  </div>
 		  <a class="left carousel-control" href="#homepage-carousel" role="button" data-slide="prev">
@@ -42,5 +42,4 @@ get_header(); ?>
 	</main><!-- #main -->
 </div><!-- #primary -->
 <?php
-get_sidebar();
 get_footer();
