@@ -107,6 +107,8 @@ function dchglobal_scripts() {
 
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array('jquery'), '', true );
 
+  wp_enqueue_script( 'index-js', get_template_directory_uri() . '/js/index.js', array('jquery'), '', true );
+
 	wp_enqueue_style( 'dchglobal-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'dchglobal-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );

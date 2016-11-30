@@ -39,3 +39,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .home {
   background-color: black;
 }
+
+.full-screen {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.carousel-item img {
+  height: 100% !important;
+}
