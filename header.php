@@ -21,29 +21,20 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'dchglobal' ); ?></a>
+	<nav id="site-navigation" class="navbar navbar-full navbar-dark bg-inverse" role="navigation">
+  <div class="container">
+    <a class="navbar-brand" href="<?php echo get_site_url(); ?>">
+  <img src="http://placehold.it/200x100" alt="DCH Global">
+</a>
+		<?php wp_nav_menu( array(
+      'theme_location' => 'primary',
+      'container' => false,
+      'items_wrap' => '<ul class="nav navbar-nav">%3$s</ul>',
+      'link_before' => '<span class="nav-link">',
+      'link_after' => '</span>'
+    ) ); ?>
+      </div>
+	</nav>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'dchglobal' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
+  <!-- #site-navigation -->
 	<div id="content" class="site-content">
