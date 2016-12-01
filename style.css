@@ -22,11 +22,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 .home .site-footer {
   width: 100%;
-  text-align: center;
   z-index: 5000;
   position: absolute;
   bottom: 0;
 }
+
+.site-footer {
+  text-align: center;
+}
+
 .navbar-nav {
   padding-top: 35px;
   padding-bottom: 35px;
@@ -60,4 +64,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 .carousel-inner {
   width: 100%;
+}
+
+#page .nav-link {
+  color: black;
 }
