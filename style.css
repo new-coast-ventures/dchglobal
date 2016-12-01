@@ -69,3 +69,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 #page .nav-link {
   color: black;
 }
+
+.entry-title {
+  margin: 3rem auto;
+}

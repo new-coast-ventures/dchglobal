@@ -11,10 +11,12 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+    <img src="http://placehold.it/1400x600" class="img-fluid hero-image" alt="Responsive image">
+    <div class="container">
+		<?php the_title( '<h1 class="entry-title display-4">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content container">
 		<?php
 			the_content();
 
@@ -24,5 +26,5 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-
+</div>
 </article><!-- #post-## -->
