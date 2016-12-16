@@ -1,0 +1,45 @@
+/*
+* New Coast Ventures
+* Copyright New Coast Ventures 2017
+* newcoastventures.com
+*/
+
+
+// System
+ul.feature-list {
+  list-style: none;
+  margin: 0;
+  padding: 24px;
+  @extend %clear;
+
+  @include breakpoint(l-three) {
+    padding: 8px 0;
+  }
+
+  li {
+    float: left;
+    margin: 0 8% 24px 0;
+    width: 46%;
+
+    @include breakpoint(l-three) {
+      float: none;
+      margin: 0 0 16px;
+      width: 100%;
+    }
+
+    &:nth-child(even) {
+      margin: 0 0 24px;
+
+      @include breakpoint(l-three) {
+        margin: 0 0 16px;
+      }
+    }
+
+    strong {
+      display: block;
+      color: #191919;
+      font-family: 'Open San', sans-serif;
+      font-weight: 700;
+    }
+  }
+}

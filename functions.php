@@ -45,6 +45,8 @@ function dchglobal_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'dchglobal' ),
+		'contact' => esc_html__( 'Contact', 'dchglobal' ),
+		'mobile' => esc_html__( 'Mobile', 'dchglobal' ),
     'footer' => esc_html__( 'Footer', 'dchglobal' ),
 	) );
 
@@ -105,6 +107,7 @@ add_action( 'widgets_init', 'dchglobal_widgets_init' );
 function dchglobal_scripts() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css');
 
+	wp_enqueue_script( 'tether-js', get_template_directory_uri() . '/bootstrap/js/tether.min.js', array('jquery'), '', true );
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array('jquery'), '', true );
 
   wp_enqueue_script( 'index-js', get_template_directory_uri() . '/js/index.js', array('jquery'), '', true );
@@ -145,3 +148,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Load custom WordPress nav walker.
+ */
+require get_template_directory() . '/inc/bs4navwalker.php';

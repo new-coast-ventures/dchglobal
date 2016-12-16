@@ -1,0 +1,49 @@
+/*
+* New Coast Ventures
+* Copyright New Coast Ventures 2017
+* newcoastventures.com
+*/
+
+
+// Carousel
+.full-screen {
+  background-color: #191919;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+}
+
+.carousel-inner {
+  width: 100%;
+}
+
+// Indicators
+.carousel-control .icon-next, .carousel-control .icon-prev {
+  font-size: 40px;
+  height: 40px;
+  margin-top: -20px;
+  width: 40px;
+}
+
+ol.carousel-indicators {
+  bottom: 64px;
+
+  @include breakpoint(l-one) {
+    bottom: 24px;
+  }
+
+  li {
+    border-radius: 16px;
+    height: 16px;
+    margin: 0 4px;
+    width: 16px;
+
+    &.active {
+      height: 16px;
+      margin: 0 4px;
+      width: 16px;
+    }
+  }
+}

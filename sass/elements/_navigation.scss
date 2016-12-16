@@ -1,0 +1,130 @@
+/*
+* New Coast Ventures
+* Copyright New Coast Ventures 2017
+* newcoastventures.com
+*/
+
+
+// Header
+nav.navbar.navbar-dark {
+  background: #222;
+  background: -webkit-linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0));
+  background: -o-linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0));
+  background: -moz-linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0));
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0));
+  height: 72px;
+  padding: 16px 0;
+  position: absolute;
+  width: 100%;
+
+  @include breakpoint(l-three) {
+    background: rgba(0,0,0,0.8);
+  }
+
+  a.navbar-brand {
+    margin: 0 64px 0 24px;
+    padding: 0;
+    height: 40px;
+
+    @include breakpoint(l-one) {
+      margin: 0;
+    }
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  .nav-item+.nav-item {
+    margin-left: 40px;
+
+    @include breakpoint(l-three) {
+      margin-left: 0;
+    }
+  }
+
+  a.nav-link {
+    color: #FFF;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 24px;
+    padding: 8px 0;
+    text-transform: uppercase;
+
+    &:focus, &:hover {
+      color: #EF000C;
+    }
+
+    &.dropdown-toggle::after {
+      content: none;
+      border-top: 0;
+      border-right: 0;
+      border-left: 0;
+    }
+  }
+
+  .navbar-toggler {
+    border-color: rgba(255,255,255,0.4);
+    float: right;
+    outline: none;
+  }
+}
+
+.primary-left {
+  float: left;
+}
+
+.contact-right {
+  float: right;
+  margin: 0 24px 0 0;
+}
+
+// Dropdown Menu
+.dropdown-menu {
+  background: rgba(0,0,0,0.8);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.75em;
+  font-weight: 700;
+  margin: 0;
+  padding: 16px 0;
+  text-transform: uppercase;
+
+  a {
+    color: #FFF;
+    font-weight: 700;
+
+    &.active, &.active:focus, &.active:hover, &:focus, &:hover {
+      background: none;
+      color: #EF000C;
+    }
+  }
+}
+
+// Mobile Menu
+#menu-mobile-menu {
+  background: rgba(0,0,0,0.8);
+  margin: 16px 0 0;
+  padding: 0 0 16px;
+
+  a.nav-link {
+    padding: 4px 16px;
+  }
+
+  .dropdown-menu {
+    background: none;
+    border: 0;
+    margin: 0 16px;
+    padding: 8px 4px;
+
+    a {
+      margin: 0 0 12px;
+      padding: 4px 0;
+    }
+  }
+}
+
+li:hover.dropdown .dropdown-menu {
+  @include breakpoint(l-five) {
+    display: block;
+  }
+}

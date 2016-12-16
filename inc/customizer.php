@@ -24,3 +24,24 @@ function dchglobal_customize_preview_js() {
 	wp_enqueue_script( 'dchglobal_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'dchglobal_customize_preview_js' );
+
+/**
+ * Comments
+ */
+ function pillow_comment($comment, $args, $depth) {
+    $GLOBALS['comment'] = $comment; ?>
+    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
+      <div id="comment-<?php comment_ID(); ?>">
+
+				<?php if ($comment->comment_approved == '0') : ?>
+					<em><?php _e('Your comment is awaiting moderation.') ?></em>
+				<?php endif; ?>
+
+				<div class="comment-meta commentmetadata">
+					<?php edit_comment_link(__('Edit')) ?>
+					<?php printf(__('%s'), get_comment_author_link()) ?> on <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?></a> said:
+				</div>
+				<?php comment_text() ?>
+				<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+      </div>
+<?php }

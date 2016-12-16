@@ -11,35 +11,36 @@
  *
  * @package dchglobal
  */
+?>
 
-get_header(); ?>
-<div id="primary" class="content-area index">
-	<main id="homepage-carousel" class="carousel slide" class="site-main" role="main" data-ride="carousel">
-		  <ol class="carousel-indicators">
-		    <li data-target="#homepage-carousel" data-slide-to="0" class="active"></li>
-		    <li data-target="#homepage-carousel" data-slide-to="1"></li>
-		    <li data-target="#homepage-carousel" data-slide-to="2"></li>
-		  </ol>
-		  <div class="carousel-inner" role="listbox">
-		    <div class="carousel-item active">
-		      <img src="http://placehold.it/1024x768" alt="First slide">
-		    </div>
-		    <div class="carousel-item">
-		      <img src="http://placehold.it/1024x768" alt="Second slide">
-		    </div>
-		    <div class="carousel-item">
-		      <img src="http://placehold.it/1024x768" alt="Third slide">
-		    </div>
-		  </div>
-		  <a class="left carousel-control" href="#homepage-carousel" role="button" data-slide="prev">
-		    <span class="icon-prev" aria-hidden="true"></span>
-		    <span class="sr-only">Previous</span>
-		  </a>
-		  <a class="right carousel-control" href="#homepage-carousel" role="button" data-slide="next">
-		    <span class="icon-next" aria-hidden="true"></span>
-		    <span class="sr-only">Next</span>
-		  </a>
-	</main><!-- #main -->
-</div><!-- #primary -->
-<?php
-get_footer();
+<?php get_header(); ?>
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+			<div class="blog-content">
+				<div class="container">
+					<div class="row">
+
+						<?php if ( have_posts() ) :
+							/* Start the Loop */
+							while ( have_posts() ) : the_post();
+								/*
+								 * Include the Post-Format-specific template for the content.
+								 * If you want to override this in a child theme, then include a file
+								 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+								 */
+								get_template_part( 'template-parts/content', get_post_format() );
+							endwhile;
+							wp_pagenavi();
+						else :
+							get_template_part( 'template-parts/content', 'none' );
+						endif; ?>
+
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>

@@ -10,21 +10,16 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-    <img src="http://placehold.it/1400x600" class="img-fluid hero-image" alt="Responsive image">
-    <div class="container">
-		<?php the_title( '<h1 class="entry-title display-4">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-content container">
-		<?php
-			the_content();
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'dchglobal' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-</div>
-</article><!-- #post-## -->
+	<div class="hero-image" style="background-image: url(<?php the_post_thumbnail_url(); ?>);"></div>
+  <div class="container">
+		<div class="page-content">
+			<?php
+				the_content();
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'dchglobal' ),
+					'after'  => '</div>',
+				) );
+			?>
+		</div>
+	</div>
+</article>

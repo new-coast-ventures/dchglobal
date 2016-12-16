@@ -1,0 +1,135 @@
+/*
+* New Coast Ventures
+* Copyright New Coast Ventures 2017
+* newcoastventures.com
+*/
+
+
+// Comments
+.comments-area {
+  margin: 0 0 80px;
+
+  @include breakpoint(l-three) {
+    margin: 0 0 40px;
+  }
+}
+
+.comments-title {
+  border-bottom: 1px solid #DDD;
+  margin: 0 0 24px;
+  padding: 0 0 32px;
+}
+
+ol.comment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .comment-meta {
+    font-weight: 600;
+    margin: 0 0 8px;
+
+    a.comment-edit-link {
+      float: right;
+      font-size: 0.9em;
+    }
+  }
+
+  a.comment-reply-link {
+    background: #EDEDED;
+    border-radius: 4px;
+    color: #999;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 0.8em;
+    padding: 4px 8px;
+
+    &:hover, &:focus {
+      background: #DDD;
+      text-decoration: none;
+    }
+  }
+
+  li {
+    border-bottom: 1px solid #DDD;
+    margin: 0 0 32px;
+    padding: 0 0 24px;
+  }
+
+  p {
+    font-size: 1.125em;
+    margin: 0 0 12px;
+  }
+
+  ol, ul {
+    border-left: 2px solid #DDD;
+    list-style: none;
+    margin: 24px 0 0 46px;
+    padding: 0 0 0 16px;
+
+    li {
+      border-bottom: 0;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+p.comment-notes {
+  display: none;
+  visibility: hidden;
+}
+
+.comment-respond h5 {
+  margin: 0 0 16px;
+}
+
+form.comment-form {
+
+  .form-group {
+    margin: 0 0 20px;
+    position: relative;
+
+    textarea, input.form-control {
+      background: #EDEDED;
+      border: 2px solid #EDEDED;
+      border-radius: 6px;
+
+      &:focus {
+        background: #FFF;
+      }
+    }
+
+    span.required {
+      color: #999;
+      position: absolute;
+      right: 12px;
+      top: 10px;
+    }
+  }
+
+  p.form-submit input[type=submit] {
+    background: none;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    height: 56px;
+    line-height: 52px;
+    padding: 0 24px;
+    text-align: center;
+
+    &:hover, &:focus {
+      background: #000;
+      color: #FFF;
+      text-decoration: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

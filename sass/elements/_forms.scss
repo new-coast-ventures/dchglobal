@@ -1,0 +1,37 @@
+/*
+* New Coast Ventures
+* Copyright New Coast Ventures 2017
+* newcoastventures.com
+*/
+
+
+// Forms
+.form-group {
+  margin: 0 0 12px;
+
+  label {
+    color: #999;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.688em;
+    font-weight: 700;
+    margin: 0 0 4px;
+    padding: 0;
+    text-transform: uppercase;
+  }
+
+  .form-control {
+    padding: 0.5rem 0.75rem;
+  }
+
+  textarea.form-control, input.form-control, select.form-control {
+    background: #EDEDED;
+    border: 2px solid #EDEDED;
+    border-radius: 4px;
+
+    &:focus {
+      background: #FFF;
+      border: 2px solid #EDEDED;
+    }
+
+  }
+}

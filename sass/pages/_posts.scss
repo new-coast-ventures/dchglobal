@@ -1,0 +1,190 @@
+/*
+* New Coast Ventures
+* Copyright New Coast Ventures 2017
+* newcoastventures.com
+*/
+
+
+// Blog
+body.blog, body.single {
+
+  nav.navbar.navbar-dark {
+    background: #222;
+  }
+}
+
+.blog-content {
+  padding: 160px 0 80px;
+
+  @include breakpoint(l-one) {
+    padding: 96px 0 24px;
+  }
+}
+
+body.single .blog-content {
+  padding: 160px 0 24px;
+
+  @include breakpoint(l-one) {
+    padding: 96px 0 8px;
+  }
+}
+
+// Post Items
+a.post-item {
+  background: #333;
+  border-radius: 6px;
+  display: block;
+  margin: 0 0 48px;
+
+  @include breakpoint(l-one) {
+    margin: 0 0 16px;
+  }
+
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+
+  .pi-image {
+    background-position: center;
+    background-size: cover;
+    border-radius: 4px 4px 0 0;
+    height: 160px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .pi-info {
+    background: #FFF;
+    border: 1px solid #EDEDED;
+    border-width: 0 1px 2px;
+    border-radius: 0 0 4px 4px;
+    box-sizing: border-box;
+    padding: 24px 32px 32px;
+
+    @include breakpoint(l-one) {
+      padding: 16px 24px 24px;
+    }
+
+    .pi-title {
+      color: #191919;
+      display: -webkit-box;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.25em;
+      font-weight: 300;
+      height: 48px;
+      line-height: 1.2;
+      margin: 0 0 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    .pi-date {
+      color: #191919;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.688em;
+      font-weight: 700;
+      margin: 0 0 16px;
+      text-transform: uppercase;
+    }
+
+    .pi-excerpt {
+      color: #666;
+      line-height: 1.4;
+      min-height: 112px;
+    }
+  }
+}
+
+// Post Pagination
+.wp-pagenavi {
+  padding: 20px 0 40px 0;
+  text-align: center;
+
+  @include breakpoint(l-one) {
+    padding: 20px 0 40px 0;
+  }
+
+  a, span {
+    border: 2px solid #EDEDED;
+    border-radius: 4px;
+    color: #999;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    font-weight: 700;
+    margin: 0 8px 0 0;
+    padding: 6px 11px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  span.extend {
+    border: 2px solid transparent;
+    padding: 6px;
+  }
+
+  a {
+    -webkit-transition: border-color, 200ms ease-in-out, color, 200ms ease-in-out;
+    -moz-transition: border-color, 200ms ease-in-out, color, 200ms ease-in-out;
+    transition: border-color, 200ms ease-in-out, color, 200ms ease-in-out;
+
+    &:hover, &:focus {
+      border-color: #999;
+      color: #666;
+    }
+  }
+
+  span.current {
+    border-color: #191919;
+    color: #191919;
+    font-weight: 700;
+  }
+}
+
+// Post Header
+.p-header {
+  margin: 0 0 64px;
+  text-align: center;
+
+  @include breakpoint(l-one) {
+    margin: 0 0 24px;
+  }
+
+  h1 {
+    margin: 0 0 16px;
+  }
+
+  p {
+    color: #191919;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.75em;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+
+// Feature Image
+img.post-feature-image {
+  height: auto;
+  margin: 0 0 40px;
+  width: 100%;
+
+  @include breakpoint(l-one) {
+    margin: 0 0 24px;
+  }
+}
+
+// Search Results
+.search-result {
+  margin: 0 0 32px;
+
+  h4, p {
+    margin: 0 0 16px;
+  }
+
+  .sr-meta, .sr-footer {
+    margin: 0 0 8px;
+  }
+}

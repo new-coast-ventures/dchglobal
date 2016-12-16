@@ -10,38 +10,17 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_single() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php dchglobal_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'dchglobal' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'dchglobal' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php dchglobal_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+	<?php if ( 'post' === get_post_type() ) : ?>
+		<div class="col-md-4">
+	    <a href="<?php the_permalink(); ?>" class="post-item">
+				<?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large'); ?>
+				<div class="pi-image" style="background-image: url('<?php echo $image[0]; ?>')"></div>
+	      <div class="pi-info">
+	        <div class="pi-title"><?php the_title(); ?></div>
+					<div class="pi-date"><?php echo get_the_date(); ?></div>
+	        <div class="pi-excerpt"><?php echo substr(get_the_excerpt(), 0,124); ?>&hellip;</div>
+	      </div>
+	    </a>
+	  </div>
+	<?php endif; ?>
+</article>
