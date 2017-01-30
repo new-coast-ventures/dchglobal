@@ -14,7 +14,7 @@ section.section-secondary {
   }
 
   &.second {
-    margin: -36px 0 0 0;
+    margin: -12px 0 0 0;
   }
 
   @include breakpoint(l-six) {
@@ -97,6 +97,11 @@ section.section-secondary {
 .image-spacing-24 {
   padding-top: 24px;
 }
+
+.image-spacing-42 {
+  padding-top: 42px;
+}
+
 
 // Active Listings
 .active-listing {
