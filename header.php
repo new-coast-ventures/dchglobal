@@ -22,10 +22,10 @@
 <body <?php body_class(); ?>>
 
 	<div id="page" class="site">
-		<nav id="site-navigation" class="navbar navbar-full navbar-dark" role="navigation">
-  		<div class="container-fluid">
+		<nav id="site-navigation" class="navbar navbar-full navbar-light" role="navigation">
+  		<div class="container">
     		<a class="navbar-brand" href="<?php echo get_site_url(); ?>">
-  				<img src="<?php bloginfo('template_url'); ?>/images/logo-dch-global.png" alt="DCH Global">
+  				<img src="<?php bloginfo('template_url'); ?>/images/logo-dch-global-black.png" alt="DCH Global">
 				</a>
 				<button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"></button>
 				<ul class="nav nav-inline primary-left hidden-sm-down">

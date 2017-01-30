@@ -8,7 +8,9 @@
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<?php /*
 			<div class="hero-image" style="background-image: url(<?php the_post_thumbnail_url(); ?>);"></div>
+			*/ ?>
 			<div class="page-content">
 				<div class="container">
 					<div class="row">
@@ -19,7 +21,7 @@
 						</div>
 						<div class="col-md-4">
 							<div class="contact-info">
-								<h3>Our Office</h3>
+								<h4>Our Office</h4>
 								<p>Optima DCHGlobal, Inc.<br/>
 									7157 East Rancho Vista Drive<br/>
 									Suite 109<br/>

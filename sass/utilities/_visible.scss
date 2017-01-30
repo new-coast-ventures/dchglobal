@@ -22,6 +22,17 @@
     visibility: hidden;
   }
 }
+
+#desktop-inline {
+  display: inline-block;
+  visibility: visible;
+
+  @include breakpoint(l-three) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
 #mobile {
   display: none;
   visibility: hidden;

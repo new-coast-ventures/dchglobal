@@ -6,10 +6,3 @@
 
 
 // Contact
-.contact-info {
-  padding: 160px 0 0 24px;
-
-  @include breakpoint(l-three) {
-    padding: 80px 0 0 0;
-  }
-}

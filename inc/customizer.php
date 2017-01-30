@@ -26,6 +26,13 @@ function dchglobal_customize_preview_js() {
 add_action( 'customize_preview_init', 'dchglobal_customize_preview_js' );
 
 /**
+ * Check if content is empty
+ */
+function empty_content($str) {
+    return trim(str_replace('&nbsp;','',strip_tags($str))) == '';
+}
+
+/**
  * Comments
  */
  function pillow_comment($comment, $args, $depth) {

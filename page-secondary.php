@@ -72,21 +72,39 @@ $section_10_image    			= get_field('section_10_image');
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<?php /*
 			<div class="hero-image" style="background-image: url(<?php the_post_thumbnail_url(); ?>);"></div>
+			*/ ?>
+			<?php if (!empty_content($post->post_content)) { ?>
+				<div class="container">
+					<div class="page-content">
+						<?php
+							the_content();
+							wp_link_pages( array(
+								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'dchglobal' ),
+								'after'  => '</div>',
+							) );
+						?>
+					</div>
+				</div>
+			<?php } ?>
 
 			<?php if( get_field('section_1_title') ) { ?>
 				<section class="section-secondary first">
 					<div class="container">
 						<div class="row">
-							<div id="mobile" class="col-md-4">
+							<div id="mobile" class="col-md-2">
 								<img src="<?php echo $section_1_image; ?>"/>
 							</div>
-							<div class="col-md-6 offset-md-1">
-								<h2><?php echo $section_1_title; ?></h2>
+							<div class="col-md-8 offset-md-1">
+								<h4>
+									<span><?php echo $section_1_title; ?></span>
+									<a id="desktop-inline" href="<?php echo $section_1_button_link; ?>" class="button"><?php echo $section_1_button; ?></a>
+								</h4>
 								<p><?php echo $section_1_content; ?></p>
-								<a href="<?php echo $section_1_button_link; ?>" class="button"><?php echo $section_1_button; ?></a>
+								<a id="mobile" href="<?php echo $section_1_button_link; ?>" class="button"><?php echo $section_1_button; ?></a>
 							</div>
-							<div id="desktop" class="col-md-4">
+							<div id="desktop" class="col-md-2 image-spacing">
 								<img src="<?php echo $section_1_image; ?>"/>
 							</div>
 						</div>
@@ -95,16 +113,22 @@ $section_10_image    			= get_field('section_10_image');
 			<?php } ?>
 
 			<?php if( get_field('section_2_title') ) { ?>
-				<section class="section-secondary">
+				<section class="section-secondary second">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-4 offset-md-1">
+							<div id="mobile" class="col-md-2">
 								<img src="<?php echo $section_2_image; ?>"/>
 							</div>
-							<div class="col-md-6">
-								<h2><?php echo $section_2_title; ?></h2>
+							<div class="col-md-8 offset-md-1">
+								<h4>
+									<span><?php echo $section_2_title; ?></span>
+									<a id="desktop-inline" href="<?php echo $section_2_button_link; ?>" class="button"><?php echo $section_2_button; ?></a>
+								</h4>
 								<p><?php echo $section_2_content; ?></p>
-								<a href="<?php echo $section_2_button_link; ?>" class="button"><?php echo $section_2_button; ?></a>
+								<a id="mobile" href="<?php echo $section_2_button_link; ?>" class="button"><?php echo $section_2_button; ?></a>
+							</div>
+							<div id="desktop" class="col-md-2 image-spacing">
+								<img src="<?php echo $section_2_image; ?>"/>
 							</div>
 						</div>
 					</div>
@@ -112,18 +136,21 @@ $section_10_image    			= get_field('section_10_image');
 			<?php } ?>
 
 			<?php if( get_field('section_3_title') ) { ?>
-				<section class="section-secondary">
+				<section class="section-secondary second">
 					<div class="container">
 						<div class="row">
-							<div id="mobile" class="col-md-4">
+							<div id="mobile" class="col-md-2">
 								<img src="<?php echo $section_3_image; ?>"/>
 							</div>
-							<div class="col-md-6 offset-md-1">
-								<h2><?php echo $section_3_title; ?></h2>
+							<div class="col-md-8 offset-md-1">
+								<h4>
+									<span><?php echo $section_3_title; ?></span>
+									<a id="desktop-inline" href="<?php echo $section_3_button_link; ?>" class="button"><?php echo $section_3_button; ?></a>
+								</h4>
 								<p><?php echo $section_3_content; ?></p>
-								<a href="<?php echo $section_3_button_link; ?>" class="button"><?php echo $section_3_button; ?></a>
+								<a id="mobile" href="<?php echo $section_3_button_link; ?>" class="button"><?php echo $section_3_button; ?></a>
 							</div>
-							<div id="desktop" class="col-md-4">
+							<div id="desktop" class="col-md-2 image-spacing">
 								<img src="<?php echo $section_3_image; ?>"/>
 							</div>
 						</div>
@@ -132,16 +159,22 @@ $section_10_image    			= get_field('section_10_image');
 			<?php } ?>
 
 			<?php if( get_field('section_4_title') ) { ?>
-				<section class="section-secondary">
+				<section class="section-secondary second">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-4 offset-md-1">
+							<div id="mobile" class="col-md-2">
 								<img src="<?php echo $section_4_image; ?>"/>
 							</div>
-							<div class="col-md-6">
-								<h2><?php echo $section_4_title; ?></h2>
+							<div class="col-md-8 offset-md-1">
+								<h4>
+									<span><?php echo $section_4_title; ?></span>
+									<a id="desktop-inline" href="<?php echo $section_4_button_link; ?>" class="button"><?php echo $section_4_button; ?></a>
+								</h4>
 								<p><?php echo $section_4_content; ?></p>
-								<a href="<?php echo $section_4_button_link; ?>" class="button"><?php echo $section_4_button; ?></a>
+								<a id="mobile" href="<?php echo $section_4_button_link; ?>" class="button"><?php echo $section_4_button; ?></a>
+							</div>
+							<div id="desktop" class="col-md-2 image-spacing">
+								<img src="<?php echo $section_4_image; ?>"/>
 							</div>
 						</div>
 					</div>
@@ -149,18 +182,21 @@ $section_10_image    			= get_field('section_10_image');
 			<?php } ?>
 
 			<?php if( get_field('section_5_title') ) { ?>
-				<section class="section-secondary">
+				<section class="section-secondary second">
 					<div class="container">
 						<div class="row">
-							<div id="mobile" class="col-md-4">
+							<div id="mobile" class="col-md-2">
 								<img src="<?php echo $section_5_image; ?>"/>
 							</div>
-							<div class="col-md-6 offset-md-1">
-								<h2><?php echo $section_5_title; ?></h2>
+							<div class="col-md-8 offset-md-1">
+								<h4>
+									<span><?php echo $section_5_title; ?></span>
+									<a id="desktop-inline" href="<?php echo $section_5_button_link; ?>" class="button"><?php echo $section_5_button; ?></a>
+								</h4>
 								<p><?php echo $section_5_content; ?></p>
-								<a href="<?php echo $section_5_button_link; ?>" class="button"><?php echo $section_5_button; ?></a>
+								<a id="mobile" href="<?php echo $section_5_button_link; ?>" class="button"><?php echo $section_5_button; ?></a>
 							</div>
-							<div id="desktop" class="col-md-4">
+							<div id="desktop" class="col-md-2 image-spacing">
 								<img src="<?php echo $section_5_image; ?>"/>
 							</div>
 						</div>
@@ -169,16 +205,22 @@ $section_10_image    			= get_field('section_10_image');
 			<?php } ?>
 
 			<?php if( get_field('section_6_title') ) { ?>
-				<section class="section-secondary">
+				<section class="section-secondary second">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-4 offset-md-1">
+							<div id="mobile" class="col-md-2">
 								<img src="<?php echo $section_6_image; ?>"/>
 							</div>
-							<div class="col-md-6">
-								<h2><?php echo $section_6_title; ?></h2>
+							<div class="col-md-8 offset-md-1">
+								<h4>
+									<span><?php echo $section_6_title; ?></span>
+									<a id="desktop-inline" href="<?php echo $section_6_button_link; ?>" class="button"><?php echo $section_6_button; ?></a>
+								</h4>
 								<p><?php echo $section_6_content; ?></p>
-								<a href="<?php echo $section_6_button_link; ?>" class="button"><?php echo $section_6_button; ?></a>
+								<a id="mobile" href="<?php echo $section_6_button_link; ?>" class="button"><?php echo $section_6_button; ?></a>
+							</div>
+							<div id="desktop" class="col-md-2 image-spacing">
+								<img src="<?php echo $section_6_image; ?>"/>
 							</div>
 						</div>
 					</div>
@@ -186,18 +228,21 @@ $section_10_image    			= get_field('section_10_image');
 			<?php } ?>
 
 			<?php if( get_field('section_7_title') ) { ?>
-				<section class="section-secondary">
+				<section class="section-secondary second">
 					<div class="container">
 						<div class="row">
-							<div id="mobile" class="col-md-4">
+							<div id="mobile" class="col-md-2">
 								<img src="<?php echo $section_7_image; ?>"/>
 							</div>
-							<div class="col-md-6 offset-md-1">
-								<h2><?php echo $section_7_title; ?></h2>
+							<div class="col-md-8 offset-md-1">
+								<h4>
+									<span><?php echo $section_7_title; ?></span>
+									<a id="desktop-inline" href="<?php echo $section_7_button_link; ?>" class="button"><?php echo $section_7_button; ?></a>
+								</h4>
 								<p><?php echo $section_7_content; ?></p>
-								<a href="<?php echo $section_7_button_link; ?>" class="button"><?php echo $section_7_button; ?></a>
+								<a id="mobile" href="<?php echo $section_7_button_link; ?>" class="button"><?php echo $section_7_button; ?></a>
 							</div>
-							<div id="desktop" class="col-md-4">
+							<div id="desktop" class="col-md-2 image-spacing">
 								<img src="<?php echo $section_7_image; ?>"/>
 							</div>
 						</div>
@@ -206,16 +251,22 @@ $section_10_image    			= get_field('section_10_image');
 			<?php } ?>
 
 			<?php if( get_field('section_8_title') ) { ?>
-				<section class="section-secondary">
+				<section class="section-secondary second">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-4 offset-md-1">
+							<div id="mobile" class="col-md-2">
 								<img src="<?php echo $section_8_image; ?>"/>
 							</div>
-							<div class="col-md-6">
-								<h2><?php echo $section_8_title; ?></h2>
+							<div class="col-md-8 offset-md-1">
+								<h4>
+									<span><?php echo $section_8_title; ?></span>
+									<a id="desktop-inline" href="<?php echo $section_8_button_link; ?>" class="button"><?php echo $section_8_button; ?></a>
+								</h4>
 								<p><?php echo $section_8_content; ?></p>
-								<a href="<?php echo $section_8_button_link; ?>" class="button"><?php echo $section_8_button; ?></a>
+								<a id="mobile" href="<?php echo $section_8_button_link; ?>" class="button"><?php echo $section_8_button; ?></a>
+							</div>
+							<div id="desktop" class="col-md-2 image-spacing">
+								<img src="<?php echo $section_8_image; ?>"/>
 							</div>
 						</div>
 					</div>
@@ -223,18 +274,21 @@ $section_10_image    			= get_field('section_10_image');
 			<?php } ?>
 
 			<?php if( get_field('section_9_title') ) { ?>
-				<section class="section-secondary">
+				<section class="section-secondary second">
 					<div class="container">
 						<div class="row">
-							<div id="mobile" class="col-md-4">
+							<div id="mobile" class="col-md-2">
 								<img src="<?php echo $section_9_image; ?>"/>
 							</div>
-							<div class="col-md-6 offset-md-1">
-								<h2><?php echo $section_9_title; ?></h2>
+							<div class="col-md-8 offset-md-1">
+								<h4>
+									<span><?php echo $section_9_title; ?></span>
+									<a id="desktop-inline" href="<?php echo $section_9_button_link; ?>" class="button"><?php echo $section_9_button; ?></a>
+								</h4>
 								<p><?php echo $section_9_content; ?></p>
-								<a href="<?php echo $section_9_button_link; ?>" class="button"><?php echo $section_9_button; ?></a>
+								<a id="mobile" href="<?php echo $section_9_button_link; ?>" class="button"><?php echo $section_9_button; ?></a>
 							</div>
-							<div id="desktop" class="col-md-4">
+							<div id="desktop" class="col-md-2 image-spacing">
 								<img src="<?php echo $section_9_image; ?>"/>
 							</div>
 						</div>
@@ -243,16 +297,22 @@ $section_10_image    			= get_field('section_10_image');
 			<?php } ?>
 
 			<?php if( get_field('section_10_title') ) { ?>
-				<section class="section-secondary last">
+				<section class="section-secondary second">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-4 offset-md-1">
+							<div id="mobile" class="col-md-2">
 								<img src="<?php echo $section_10_image; ?>"/>
 							</div>
-							<div class="col-md-6">
-								<h2><?php echo $section_10_title; ?></h2>
+							<div class="col-md-8 offset-md-1">
+								<h4>
+									<span><?php echo $section_10_title; ?></span>
+									<a id="desktop-inline" href="<?php echo $section_10_button_link; ?>" class="button"><?php echo $section_10_button; ?></a>
+								</h4>
 								<p><?php echo $section_10_content; ?></p>
-								<a href="<?php echo $section_10_button_link; ?>" class="button"><?php echo $section_10_button; ?></a>
+								<a id="mobile" href="<?php echo $section_10_button_link; ?>" class="button"><?php echo $section_1_button; ?></a>
+							</div>
+							<div id="desktop" class="col-md-2 image-spacing">
+								<img src="<?php echo $section_10_image; ?>"/>
 							</div>
 						</div>
 					</div>

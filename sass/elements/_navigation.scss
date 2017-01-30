@@ -6,27 +6,20 @@
 
 
 // Header
-nav.navbar.navbar-dark {
-  background: #222;
-  background: -webkit-linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0));
-  background: -o-linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0));
-  background: -moz-linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0));
-  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0));
-  height: 72px;
+nav.navbar.navbar-light {
+  background: #FFF;
+  height: 86px;
   padding: 16px 0;
   position: absolute;
   width: 100%;
 
-  @include breakpoint(l-three) {
-    background: rgba(0,0,0,0.8);
-  }
-
   a.navbar-brand {
-    margin: 0 64px 0 24px;
+    margin: 0 48px 0 24px;
     padding: 0;
-    height: 40px;
+    height: 54px;
 
-    @include breakpoint(l-one) {
+    @include breakpoint(l-three) {
+      height: 48px;
       margin: 0;
     }
 
@@ -37,7 +30,7 @@ nav.navbar.navbar-dark {
   }
 
   .nav-item+.nav-item {
-    margin-left: 40px;
+    margin-left: 32px;
 
     @include breakpoint(l-three) {
       margin-left: 0;
@@ -45,10 +38,11 @@ nav.navbar.navbar-dark {
   }
 
   a.nav-link {
-    color: #FFF;
+    color: #191919;
     font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
     line-height: 24px;
-    padding: 8px 0;
+    padding: 18px 0;
     text-transform: uppercase;
 
     &:focus, &:hover {
@@ -64,7 +58,7 @@ nav.navbar.navbar-dark {
   }
 
   .navbar-toggler {
-    border-color: rgba(255,255,255,0.4);
+    border-color: rgba(0,0,0,0.4);
     float: right;
     outline: none;
   }
@@ -102,7 +96,8 @@ nav.navbar.navbar-dark {
 
 // Mobile Menu
 #menu-mobile-menu {
-  background: rgba(0,0,0,0.8);
+  background: #FFF;
+  border-bottom: 1px solid #191919;
   margin: 16px 0 0;
   padding: 0 0 16px;
 

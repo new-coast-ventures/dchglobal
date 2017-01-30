@@ -7,11 +7,7 @@
 
 // Comments
 .comments-area {
-  margin: 0 0 80px;
-
-  @include breakpoint(l-three) {
-    margin: 0 0 40px;
-  }
+  margin: 0 0 16px;
 }
 
 .comments-title {

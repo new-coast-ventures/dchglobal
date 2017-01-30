@@ -10,7 +10,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php /*
 	<div class="hero-image" style="background-image: url(<?php the_post_thumbnail_url(); ?>);"></div>
+	*/ ?>
   <div class="container">
 		<div class="page-content">
 			<?php

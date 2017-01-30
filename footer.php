@@ -15,7 +15,7 @@
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
 	    <ul class="nav nav-inline">
-	      <li class="nav-item">&copy; 2016 DCH Global Optima</li>
+	      <li class="nav-item">&copy; 2017 Optima DCHGlobal Inc.</li>
 		     <?php wp_nav_menu( array(
 	         'container' 				=> false,
 	         'theme_location'		=> 'footer',

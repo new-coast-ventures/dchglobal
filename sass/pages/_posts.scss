@@ -14,19 +14,7 @@ body.blog, body.single {
 }
 
 .blog-content {
-  padding: 160px 0 80px;
-
-  @include breakpoint(l-one) {
-    padding: 96px 0 24px;
-  }
-}
-
-body.single .blog-content {
-  padding: 160px 0 24px;
-
-  @include breakpoint(l-one) {
-    padding: 96px 0 8px;
-  }
+  padding: 16px 0;
 }
 
 // Post Items
@@ -144,15 +132,10 @@ a.post-item {
 
 // Post Header
 .p-header {
-  margin: 0 0 64px;
-  text-align: center;
-
-  @include breakpoint(l-one) {
-    margin: 0 0 24px;
-  }
+  margin: 0 0 24px;
 
   h1 {
-    margin: 0 0 16px;
+    margin: 0 0 8px;
   }
 
   p {
@@ -168,12 +151,8 @@ a.post-item {
 // Feature Image
 img.post-feature-image {
   height: auto;
-  margin: 0 0 40px;
+  margin: 0 0 24px;
   width: 100%;
-
-  @include breakpoint(l-one) {
-    margin: 0 0 24px;
-  }
 }
 
 // Search Results

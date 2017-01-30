@@ -7,31 +7,117 @@
 
 // Secondary Pages
 section.section-secondary {
-  padding: 48px 0;
+  padding: 0 0 8px;
+
+  &.first {
+    padding: 8px 0;
+  }
+
+  &.second {
+    margin: -36px 0 0 0;
+  }
+
+  @include breakpoint(l-six) {
+    &.second {
+      margin: 0;
+    }
+  }
 
   @include breakpoint(l-one) {
-    padding: 24px 0;
+    padding: 16px 0;
 
     &.first {
-      padding: 48px 0 24px;
+      padding: 16px 0;
     }
 
     &.last {
-      padding: 24px 0 48px;
+      padding: 16px 0;
     }
   }
 
-  h2 {
-    margin: 24px 0;
+  h4 {
+    border-bottom: 1px solid #191919;
+    line-height: 1.2;
+    margin: 0 0 8px;
+    @extend %clear;
+
+    span {
+      display: inline-block;
+      margin: 10px 16px 0 0;
+    }
+
+    a.button {
+      display: inline-block;
+      float: right;
+      font-size: 0.56em;
+      height: 26px;
+      line-height: 22px;
+      margin: 4px 0 0;
+      padding: 0 8px;
+      vertical-align: top;
+      width: auto;
+
+      @include breakpoint(l-three) {
+        margin: 0;
+      }
+    }
+  }
+
+  p.blog-date {
+    color: #191919;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.875em;
+    font-weight: 700;
+    margin: 0 0 4px;
+    text-transform: uppercase;
+  }
+
+  @include breakpoint(l-three) {
+    a.button {
+      text-align: center;
+    }
   }
 
   img {
-    max-width: 100%;
     height: auto;
+    max-width: 150px;
+    width: 100%;
 
-    @include breakpoint(l-one) {
+    @include breakpoint(l-three) {
       max-width: none;
       width: 100%;
     }
+  }
+}
+
+.image-spacing {
+  padding-top: 35px;
+}
+
+.image-spacing-24 {
+  padding-top: 24px;
+}
+
+// Active Listings
+.active-listing {
+  padding: 8px;
+  text-align: center;
+
+  @include breakpoint(l-one) {
+    padding: 8px 16px;
+    text-align: left;
+  }
+
+  h5 {
+    margin: 0;
+  }
+
+  p strong {
+    color: #191919;
+    margin: 0;
+  }
+
+  a.button {
+    margin: 12px 0 0 0;
   }
 }
